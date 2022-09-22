@@ -1,0 +1,253 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@1,300&family=Source+Sans+Pro:wght@300&display=swap');
+/* mobile first*/
+
+
+*{
+    padding: 0;
+    margin: 0;
+
+}
+body{
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    background-color: #C5E7E2;
+    font-weight: bold;
+    font-size: 30px;
+    font-family: 'Roboto', sans-serif;
+    color: black;
+
+}
+
+header{
+    padding: 50px;
+    background-color: #AD9BAA;
+    justify-content: center;
+}
+
+nav ul li{
+    list-style-type: none;
+}
+
+a{
+    text-decoration: none;
+}
+
+.video1{
+    width: 300px;
+    height: 200px;
+}
+
+/*declaro áreas de la grilla*/
+
+header{
+    grid-area: header;
+}
+
+.logoJef{
+    grid-area: logoJef;
+}
+
+.navegador{
+    grid-area: navegador;
+}
+
+footer{
+    grid-area: footer;
+}
+
+.pieDePagina{
+    grid-area: pieDePagina;
+}
+
+.novedades{
+    grid-area: novedades;
+}
+
+.tituloInicio{
+    grid-area: tituloInicio;
+}
+
+.p1{
+    grid-area: p1;
+}
+
+.p2{
+    grid-area: p2;
+}
+
+aside{
+    grid-area: aside;
+}
+
+.ad{
+    grid-area: ad;
+}
+
+.imgProductos-1{
+    grid-area: img1;
+  
+}
+
+.imgProductos-2{
+    grid-area: img2;
+}
+
+.imgProductos-3{
+    grid-area: img3;
+}
+
+.envoltura{
+    display: grid;
+    background-color: #C5E7E2;
+    margin-bottom: 1.5em;
+    gap: 20px;
+    grid-template-areas: 
+    "header"
+    "logoJef"
+    "navegador"
+    "tituloInicio"
+    "novedades"
+    "p1"
+    "p2"
+    "aside"
+    "footer";
+
+}
+
+.padre{
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr;
+    justify-items: center;
+    align-items: center;
+    gap: 15px;
+    margin-top: 15px;
+}
+
+.img_redes{
+    width: 48px;
+    height: 48px;
+
+}
+
+.img_redes:hover{
+    transition-property: all;
+    transition-duration: 4s;
+}
+
+
+footer{
+    padding: 3em;
+    background-color: #AD9BAA;
+    margin-bottom: 0;
+    margin-top: 1.5em;
+    text-align: center;
+    justify-content: center;
+
+}
+
+.pieDePagina{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    padding: 10px;
+}
+
+.flex__container{
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr;
+    justify-items: center;
+    gap: 15px;
+    grid-template-areas: 
+    
+    "img1"
+    "img2"
+    "img3"
+    ;
+     
+}
+
+@media(min-width:500px){
+    .envoltura{
+        margin: 0px;
+        grid-template-columns: 1fr 1fr;
+        grid-template-areas: 
+        
+        "header header"
+        "logoJef navegador"
+        "tituloInicio tituloInicio"
+        "novedades novedades"
+        "p1" "p2" 
+        "aside aside" 
+        "footer footer"
+
+        
+        ;
+    }
+
+    .flex__container{
+        margin: 0px;
+        grid-template-columns: 1fr 1fr 1fr;
+        justify-items: center;
+        align-items: center;
+        gap: 15px;
+        
+        grid-template-areas: 
+        "header header header"
+        "logoJef navegador navegador"
+        "tituloInicio tituloInicio tituloInicio"
+
+        "img1 img2 img3"
+        "footer footer footer"
+
+        ;
+    }
+    footer{
+        margin-top: 0;
+    }
+
+    
+}
+
+@media(min-width:768px){
+    .envoltura{
+        grid-template-columns: 1fr 4fr 1fr;
+        grid-template-areas: 
+        "header header header"
+        "logoJef navegador navegador"
+        "tituloInicio tituloInicio tituloInicio"
+        "novedades novedades novedades"
+        "p1 p2 aside"
+        "footer footer footer"
+        ;
+    }
+
+    nav ul{
+        text-align: center;
+
+    }
+    li{
+        display: inline-block;
+    }
+
+    header{
+        background: rgb(173,155,170);
+background: linear-gradient(90deg, rgba(173,155,170,1) 0%, rgba(197,231,226,1) 35%, rgba(0,212,255,1) 100%);
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
