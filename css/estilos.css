@@ -26,6 +26,15 @@ header{
     justify-content: center;
 }
 
+footer{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    align-content: space-between;
+    flex-direction: column;
+
+}
+
 nav ul li{
     list-style-type: none;
 }
@@ -59,6 +68,10 @@ footer{
 
 .pieDePagina{
     grid-area: pieDePagina;
+}
+
+.redes{
+    grid-area: redes;
 }
 
 .novedades{
@@ -129,6 +142,7 @@ aside{
 .img_redes{
     width: 48px;
     height: 48px;
+    align-self: flex-end;
 
 }
 
@@ -139,30 +153,27 @@ aside{
 
 
 footer{
-    padding: 3em;
+    display: flex;
+    padding: 1em;
     background-color: #AD9BAA;
     margin-bottom: 0;
     margin-top: 1.5em;
     text-align: center;
-    justify-content: center;
+    align-items: center;
+
+    
 
 }
 
-.pieDePagina{
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-    padding: 10px;
-}
+
 
 .flex__container{
     display: grid;
     grid-template-columns: 1fr;
     grid-template-rows: 1fr;
     justify-items: center;
-    gap: 15px;
+    gap: 6px;
     grid-template-areas: 
-    
     "img1"
     "img2"
     "img3"
@@ -170,19 +181,21 @@ footer{
      
 }
 
-@media(min-width:500px){
+@media(min-width:576px){
     .envoltura{
         margin: 0px;
-        grid-template-columns: 1fr 1fr;
+        grid-template-columns: 1fr;
         grid-template-areas: 
         
-        "header header"
-        "logoJef navegador"
-        "tituloInicio tituloInicio"
-        "novedades novedades"
-        "p1" "p2" 
-        "aside aside" 
-        "footer footer"
+        "header"
+        "logoJef"
+        "navegador"
+        "tituloInicio"
+        "novedades"
+        "p1"
+        "p2"
+        "aside" 
+        "footer"
 
         
         ;
@@ -190,18 +203,21 @@ footer{
 
     .flex__container{
         margin: 0px;
-        grid-template-columns: 1fr 1fr 1fr;
+        grid-template-columns: 1fr;
         justify-items: center;
         align-items: center;
         gap: 15px;
         
         grid-template-areas: 
-        "header header header"
-        "logoJef navegador navegador"
-        "tituloInicio tituloInicio tituloInicio"
+        "header"
+        "logoJef"
+        "navegador"
+        "tituloInicio"
 
-        "img1 img2 img3"
-        "footer footer footer"
+        "img1"
+        "img2" 
+        "img3"
+        "footer"
 
         ;
     }
@@ -237,7 +253,40 @@ footer{
         background: rgb(173,155,170);
 background: linear-gradient(90deg, rgba(173,155,170,1) 0%, rgba(197,231,226,1) 35%, rgba(0,212,255,1) 100%);
     }
+
+    .flex__container{
+        margin: 0px;
+        grid-template-columns: 1fr 1fr 1fr;
+        justify-items: center;
+        align-items: center;
+        gap: 15px;
+        
+        grid-template-areas: 
+       
+
+        "img1 img2 img3"
+    
+        
+
+        ;
+    }
+
+    footer{
+        display: flex;
+        flex-direction: row;
+        align-items:flex-end
+        justify-content: space-around;
+    }
+
+
+
+
 }
+
+@media(min-width:992px){
+
+}
+
 
 
 
