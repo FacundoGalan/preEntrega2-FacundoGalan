@@ -1,0 +1,306 @@
+@charset "UTF-8";
+@import url("https://fonts.googleapis.com/css2?family=Roboto:ital,wght@1,300&family=Source+Sans+Pro:wght@300&display=swap");
+* {
+  padding: 0;
+  margin: 0;
+}
+
+body {
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  background-color: rgb(243, 9, 9);
+  font-weight: bold;
+  font-size: 30px;
+  font-family: "Roboto", sans-serif;
+  color: rgb(1, 1, 61);
+}
+
+
+
+
+/* mobile first*/
+header {
+  padding: 50px;
+  background-color: white;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+
+.barraNav {
+  padding: 30px;
+}
+
+footer {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  align-content: space-between;
+  flex-direction: column;
+}
+
+nav ul li {
+  list-style-type: none;
+}
+
+a {
+  text-decoration: none;
+}
+
+.video1 {
+  width: 300px;
+  height: 200px;
+}
+
+.productos {
+  font-weight: bold;
+  margin-bottom: 60px;
+  margin-top: 6px;
+}
+
+.tituloServicios{
+  font-weight: bold;
+}
+
+main {
+  padding: 10px;
+  margin-top: 0px;
+  margin-bottom: 180px;
+  display: flex;
+  flex-wrap: column;
+  justify-content: center;
+  
+  
+}
+
+.publicidad{
+  padding: 100px;
+}
+
+/*declaro áreas de la grilla*/
+header {
+  grid-area: header;
+}
+
+.logoJef {
+  grid-area: logoJef;
+}
+
+.navegador {
+  grid-area: navegador;
+}
+
+footer {
+  grid-area: footer;
+}
+
+.pieDePagina {
+  grid-area: pieDePagina;
+  width: 100%;
+}
+
+.pieDePagina > p {
+  font-size: 1rem;
+ width: 100%;
+}
+
+
+
+.redes {
+  grid-area: redes;
+}
+
+.novedades {
+  grid-area: novedades;
+}
+
+.tituloInicio {
+  grid-area: tituloInicio;
+}
+
+.p1 {
+  grid-area: p1;
+}
+
+.p2 {
+  grid-area: p2;
+}
+
+aside {
+  grid-area: aside;
+}
+
+.ad {
+  grid-area: ad;
+}
+
+.productos{
+  grid-area: productos;
+}
+
+.imgProductos-1 {
+  grid-area: img1;
+  }
+
+.imgProductos-1{
+  border-color: rgb(2, 2, 54);
+  border-width: 2px;
+  border-style: solid;
+  border-radius: 20px;
+  padding: 20px;
+}
+
+.boton{
+  border-color: rgb(238, 186, 195);
+  border width: 20px
+  border-style: solid;
+  border-radius: 20px;
+  padding: 5px;
+  background-color: rgb(238, 186, 195);
+  font-size: 20px;
+
+}
+
+
+.imgProductos-2 {
+  grid-area: img2;
+}
+.imgProductos-2 {
+  border-color: rgb(2, 2, 54);
+  border-width: 2px;
+  border-style: solid;
+  border-radius: 20px;
+  padding: 20px;
+}
+
+
+.imgProductos-3 {
+  grid-area: img3;
+}
+
+.imgProductos-3 {
+  border-color: rgb(2, 2, 54);
+  border-width: 2px;
+  border-style: solid;
+  border-radius: 20px;
+  padding: 20px;
+}
+
+
+.envoltura {
+  display: grid;
+  background-color: rgb(19, 4, 72);
+  margin-bottom: 1.5em;
+  gap: 5px;
+  grid-template-areas: "header" "logoJef" "navegador" "tituloInicio" "novedades" "p1" "p2" "aside" "footer";
+}
+
+.padre {
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: 1fr;
+  justify-items: center;
+  align-items: center;
+  gap: 15px;
+  margin-top: 15px;
+}
+
+.img_redes {
+  width: 48px;
+  height: 48px;
+  align-self: flex-end;
+}
+
+.img_redes:hover {
+  transition-property: all;
+  transition-duration: 4s;
+}
+
+footer {
+  display: flex;
+  padding: 1em;
+  background-color: rgba(66, 64, 64, 0.345);
+  margin-bottom: 0;
+  margin-top: 1.5em;
+  text-align: center;
+  align-items: center;
+}
+
+
+.flex__container {
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: 1fr;
+  justify-items: center;
+  gap: 6px;
+  grid-template-areas: 
+  "productos"
+  "img1" "img2" "img3";
+}
+
+@media (min-width: 576px) {
+  .envoltura {
+    gap: 5px;
+    margin: 0px;
+    grid-template-columns: 1fr;
+    grid-template-areas: "header" "logoJef" "navegador" "tituloInicio" "novedades" "p1" "p2" "aside" "footer";
+  }
+  .flex__container {
+    margin: 0px;
+    grid-template-columns: 1fr;
+    justify-items: center;
+    align-items: center;
+    gap: 6px;
+    grid-template-areas: "header" "logoJef" "navegador" "tituloInicio" "img1" "img2" "img3" "footer";
+  }
+  footer {
+    margin-top: 0px;
+  }
+  .pieDePagina{
+    grid-area: pieDePagina;
+    width: 50%;
+    text-align: left;
+}
+
+
+}
+@media (min-width: 768px) {
+  .envoltura {
+    gap: 5px;
+    grid-template-columns: 1fr 4fr 1fr;
+    grid-template-areas: "header header header" "logoJef navegador navegador" "tituloInicio tituloInicio tituloInicio" "novedades novedades novedades" "p1 p2 aside" "footer footer footer";
+  }
+
+
+  nav ul {
+    text-align: center;
+  }
+  li {
+    display: inline-block;
+  }
+  header {
+    background: white;
+  }
+  .flex__container {
+    display: grid;
+    flex-direction: row;
+    margin: 0px;
+    grid-template-columns: 1fr 1fr 1fr;
+    justify-items: center;
+    align-items: center;
+    gap: 5px;
+    grid-template-areas: 
+    "productos productos productos"
+    "img1 img2 img3";
+  }
+  footer {
+    padding: 2em;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    margin-bottom: 0px;
+  }
+}/*# sourceMappingURL=style.css.map */
